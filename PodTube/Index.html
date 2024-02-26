@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+ <head>
+	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="Flip Css" content="Flip Card Css Vertical" />
+    <meta name="description" content="Flip Card - Esse efeito nos permite fazer com que um elemento gire ao passarmos o mouse sobre ele."/>
+    <meta name="keywords" content="Html, Css, Jquery, Wordpress, Sites Grátis, Tema para Wordpress, Site Responsivo"/>
+    <meta name="author" content="Loop Nerd" />
+    <meta name="URL" content="https://www.loopnerd.com.br/artigos/css3/flip-card-css-efeito-vertical"/>
+    <meta http-equiv="content-language" content="pt-br" />
+    <meta name="robots" content="index, follow"/>
+    
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->       
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts-icones.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/ico" />
+
+	<title>Home - PodTube</title>
+
+ </head>
+
+<body>
+    
+<header class="main_header container">        
+    <div class="content">
+    
+        <div class="main_header_logo">
+            <a href="Index.html" ><img src="img/logo.png" alt="logo.png" title="Loop Nerd"/></a>
+        </div>
+    
+    </div>
+
+</header>
+
+<nav class="bg hover-circulo">
+
+   <a href="https://www.loopnerd.com.br/" title="Página Inícial">Inicio</a>
+</nav>
+
+
+
+<main class="main_content container">
+
+        
+    <section class="section-seu-codigo container">
+        
+        <div class="content">
+            
+            <h1 class="section_title">Olá, Seja muito Bem-Vindo(a) a pagina principal do site, 
+                <br>espero que se divirta e disfrute do nosso conteudo</h1>
+              
+            
+            <div class="box-artigo">
+
+               <h3>Categorias</h3>
+<div>
+   <button data-categoria="analises" class="categoria" onclick="filtrarItens(this)">Analises e Reviews</button>
+   <button data-categoria="contos" class="categoria" onclick="filtrarItens(this)">Contos</button>
+  <button data-categoria="jogos" class="categoria" onclick="filtrarItens(this)">Jogos</button>
+  <button data-categoria="outros" class="categoria" onclick="filtrarItens(this)">Outros</button>
+  <button id="reset-filtro" onclick="resetFiltro()">Todos</button>
+</div>
+<hr style="border: 1px solid #555555; margin: 10px 0;"> <!-- Linha horizontal separadora -->
+                
+                <div class="centraliza-card">
+                
+                    <div class="card-flip item jogos">
+                        
+                        <div class="front" style="background-image: url('img/Cellbit.jpg')">
+                           <h1 class="text-shadow">CellBit</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>CellBit</h2>
+                           <p>Aqui encontrará conteudos do influenciador Cellbit, tais como: O segredo na ilha,
+                              Sinais do outro Lado, etc...</p>
+                           <a href="ConteudoCellbit.html">Acessar pagina</a>
+                        </div>
+
+                    </div>
+
+                    <div class="card-flip item analises">
+                        
+                        <div class="front" style="background-image: url('img/CineMania.jpg')">
+                           <h1 class="text-shadow">CineMania</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>CineMania - Terror & Reviews</h2>
+                           <p>"Produtor de conteúdo que, escapando da morte desde 1999, produz análise de filmes de Terror e subgêneros."</p>
+                           <a href="ConteudoCinemania.html" >Acessar pagina</a>
+                        </div>
+
+                    </div>
+
+                    <div class="card-flip item jogos">
+                        
+                        <div class="front" style="background-image: url('img/Core.jpg')">
+                           <h1 class="text-shadow">Core</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Core</h2>
+                           <p>"Você encontra vários jogos, coisa do Youtube e maluquices por ai! Friday Night Funkin, Undertale, FNAF, Bendy, Sonic, Baldi, Doki Doki, Spooky House, jogos de terror, jogos pra celular e por ai vai!"</p>
+                           <a href="ConteudoCore.html" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item contos">
+                        
+                        <div class="front" style="background-image: url('img/D4rk.jpg')">
+                           <h1 class="text-shadow">D4rk</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>D4rk - Medo e Horror</h2>
+                           <p>"Meu canal é um canal de terror,  onde você encontrará creepypastas e contos de terror,
+                              e se é isso que está procurando inscreva-se para receber as novidades e videos novos, fico muito agradecido pela atenção! Obrigado!"</p>
+                           <a href="ConteudoD4rk.html" >Acessar pagina</a>
+                        </div>
+
+                    </div>       
+
+                    <div class="card-flip item analises">
+                        
+                        <div class="front" style="background-image: url('img/DanaelFernandes.jpg')">
+                           <h1 class="text-shadow">Danael Fernandes</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Danael Fernandes</h2>
+                           <p>"aaaaaaaaaaaaaaaaaaaaaaaa"</p>
+                           <a href="ConteudoDanael.html" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item contos">
+                        
+                        <div class="front" style="background-image: url('img/DavidHerick.jpg')">
+                           <h1 class="text-shadow">David Herick</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>David Herick</h2>
+                           <p>"O maior canal de terror andradinense!
+                              O 2º do YouTube BRASIL!"</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item outros">
+                        
+                        <div class="front" style="background-image: url('img/EmPoucasPalavras.jpg')">
+                           <h1 class="text-shadow">Em Poucas Palavras</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Em Poucas Palavras</h2>
+                           <p>"Vídeos de animação explicando as coisas com niilismo otimista desde 12.013. Somos uma equipe de ilustradores, animadores, trituradores de números e um que tem como objetivo despertar a curiosidade sobre a ciência e o mundo em que vivemos."</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item contos">
+                        
+                        <div class="front" style="background-image: url('img/Fãdation.jpg')">
+                           <h1 class="text-shadow">Fãdation</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Fãdation</h2>
+                           <p>"Canal criado por uma Fã da SCP Foundation. Conteúdo voltado para Creepypastas, Backrooms e informações relacionadas à SCP. (Todo o conteúdo é fictício)"</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item analises">
+                        
+                        <div class="front" style="background-image: url('img/Goularte.jpg')">
+                           <h1 class="text-shadow">Goularte</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Goularte</h2>
+                           <p>"eu falo sobre várias coisas e como cookies."</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item analises">
+                        
+                        <div class="front" style="background-image: url('img/JayMello.jpg')">
+                           <h1 class="text-shadow">Jay Mello</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Jay Mello</h2>
+                           <p>"Falo de muitas coisas, as vezes é daora, as vezes não, mas é tudo feito com muito carinho ♥"</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item contos">
+                        
+                        <div class="front" style="background-image: url('img/JJ.jpg')">
+                           <h1 class="text-shadow">JJ</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>JJ</h2>
+                           <p>Mistérios da internet; Investigações; Curiosidades; Animações.</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item jogos">
+                        
+                        <div class="front" style="background-image: url('img/Lew.jpg')">
+                           <h1 class="text-shadow">Lew</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Lew</h2>
+                           <p>"Sou apenas alguém que costuma fazer vídeos sobre Jogos, ou coisas que me chamam atenção, Doc, Análise, Webséries, Opinião, Mangá."</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item jogos">
+                        
+                        <div class="front" style="background-image: url('img/LinkZin.jpg')">
+                           <h1 class="text-shadow">LinkZin</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>LinkZin</h2>
+                           <p>"Faço teoria na internet."</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item jogos">
+                        
+                        <div class="front" style="background-image: url('img/Marianna\ Lourrane.jpg')">
+                           <h1 class="text-shadow">Marianna Lourrane</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Marianna Lourrane</h2>
+                           <p>Aqui você poderá encontrar conteudos variados do canal Marianna Lourrane, tais como: Universos Alternativos de UNDERTALE, Universos Alternativos de Gravity Falls e etc...</p>
+                           <a href="ConteudoMarianna.html" >Acessar pagina</a>
+                        </div>
+
+                    </div>                   
+                    
+                    <div class="card-flip item analises">
+                        
+                        <div class="front" style="background-image: url('img/Matheusu.jpg')">
+                           <h1 class="text-shadow">Matheusu</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Matheusu</h2>
+                           <p>"E se tudo der certo, vejo vocês no próximo vídeo."</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item jogos">
+                        
+                        <div class="front" style="background-image: url('img/MrL3O.jpg')">
+                           <h1 class="text-shadow">MrL3O</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>MrL3O</h2>
+                           <p>"Olá Internet, eu me chamo Leon! Aqui vamos desvendar GRANDES mistérios dos GAMES!"</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item jogos">
+                        
+                        <div class="front" style="background-image: url('img/Planeta\ Sonic.jpg')">
+                           <h1 class="text-shadow">Planeta Sonic</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Planeta Sonic</h2>
+                           <p>"Liderado pelo jornalista profissional Victor Miller, o Planeta Sonic é um dos principais canais sobre o azulão da SEGA no Brasil." Aqui encontrará conteudos do canal Planeta Sonic, como: VIDEOANALISE, SONIC INFORMA, PERFIS e etc...</p>
+                           <a href="ConteudoPlanetaSonic.html" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item contos">
+                        
+                        <div class="front" style="background-image: url('img/PomboAtomico.jpg')">
+                           <h1 class="text-shadow">Pombo Atomico</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Pombo Atomico</h2>
+                           <p>"Um roteirista. Um editor. Um artista (@coldleaf1). Um canal. Um tema bizarro. Um vídeo por semana. Seja bem vindo! :D"</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item contos">
+                        
+                        <div class="front" style="background-image: url('img/Renatows.jpg')">
+                           <h1 class="text-shadow">Renatows</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Renatows</h2>
+                           <p>Apenas um cara seguindo o seu sonho... fazendo videos dos meus jogos favoritos.</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item contos">
+                        
+                        <div class="front" style="background-image: url('img/Rentune.jpg')">
+                           <h1 class="text-shadow">Rentune</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Rentune</h2>
+                           <p>"Um canal focado no que eu gosto"</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item outros">
+                        
+                        <div class="front" style="background-image: url('img/Replai.jpg')">
+                           <h1 class="text-shadow">Replai</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Replai</h2>
+                           <p>"Mestre dos monstros. Isso é um canal sobre arte. Arte é sobre tudo. Ainda não venci uma queda de braço."</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item contos">
+                        
+                        <div class="front" style="background-image: url('img/Rikku.jpg')">
+                           <h1 class="text-shadow">Rikku</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Rikku</h2>
+                           <p>"Mestre dos monstros. Isso é um canal sobre arte. Arte é sobre tudo. Ainda não venci uma queda de braço."</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item outros">
+                        
+                        <div class="front" style="background-image: url('img/Saiko.jpg')">
+                           <h1 class="text-shadow">Saiko</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Saiko</h2>
+                           <p>"canal q posto quando eu quero"</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item contos">
+                        
+                        <div class="front" style="background-image: url('img/SigmaTerror.jpg')">
+                           <h1 class="text-shadow">Sigma Terror</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Sigma Terror</h2>
+                           <p>Aqui encontrará conteudos variados do canal SigmaTerror, tais como: Podcast Especial de Terror, Compilações, Procurando Por Vanessa e etc...</p>
+                           <a href="ConteudoSigma.html">Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item contos">
+                        
+                        <div class="front" style="background-image: url('img/SkyRox.jpg')">
+                           <h1 class="text-shadow">SkyRox</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>SkyRox</h2>
+                           <p>"Histórias de terror e relatos assustadores, e lendas urbanas, tudo isso você encontra aqui."</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item contos">
+                        
+                        <div class="front" style="background-image: url('img/Substories.jpg')">
+                           <h1 class="text-shadow">Substories</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Substories</h2>
+                           <p>-.. . ... -.-. ..- -... .-. .- / .- / ...- . .-. -.. .- -.. . .-.-.- .-.-.- .-.-.- / --- ..- / . -. .-.. --- ..- --.- ..- . -.-. .- / - . -. - .- -. -.. --- .-.-.-</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item outros">
+                        
+                        <div class="front" style="background-image: url('img/TaikkiNikki.jpg')">
+                           <h1 class="text-shadow">Taikki Nikki</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Taikki Nikki</h2>
+                           <p>"Oi eu sou o Taiki muito obrigado pelo apoio ao meu sonho💜"</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item jogos">
+                        
+                        <div class="front" style="background-image: url('img/Taky.jpg')">
+                           <h1 class="text-shadow">Taky</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Taky</h2>
+                           <p>Serei o maestro de um novo entretenimento.</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item contos">
+                        
+                        <div class="front" style="background-image: url('img/TerrorNerd.jpg')">
+                           <h1 class="text-shadow">Terror Nerd</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Terror Nerd</h2>
+                           <p>"Contos,lendas,curiosidades,creepypastas,histórias e muitos mais você encontra neste canal ! O Meu conteúdo não é feito para ofender nenhuma crença ou pessoa, conteúdo feito para entretenimento somente.Feliz é aquele que tem maturidade de entender :) Obrigado !"</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item contos">
+                        
+                        <div class="front" style="background-image: url('img/TirantGamer.jpg')">
+                           <h1 class="text-shadow">Tirant Gamer</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Tirant Gamer</h2>
+                           <p>"Histórias, Mitos, Lendas, Um medroso jogando e Hacks Malignas!"</p>
+                           <a href="ConteudoTirant.html" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item outros">
+                        
+                        <div class="front" style="background-image: url('img/Tropia.jpg')">
+                           <h1 class="text-shadow">Tropia</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Tropia</h2>
+                           <p>"Se você quer um canal para ter um mind blow e ainda rir de vez enquanto, você veio ao lugar erra-CERTO."</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item jogos">
+                        
+                        <div class="front" style="background-image: url('img/Universo\ Ludico.jpg')">
+                           <h1 class="text-shadow">Universo Ludico</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Universo Ludico</h2>
+                           <p>"Universo Lúdico é o maior canal BR de "Lore" de League of Legends! Aqui encontrará conteudos do canal Universo Ludico, como: História dos Campeões, História de skins, Análise de cinemáticas, Fatos, detalhes, easter eggs e referências e etc..."</p>
+                           <a href="ConteudoUniversoLudico.html" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item contos">
+                        
+                        <div class="front" style="background-image: url('img/VicioMedonho.jpg')">
+                           <h1 class="text-shadow">Vicio Medonho</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Vicio Medonho</h2>
+                           <p>"salve salve galera aqui quem escreve é o saga. Conteúdo para amantes de historias de terror." Aqui encontrará conteudos do canal Vicio Medonho, como: Tenha Medo, Lendas Urbanas, CreepyPasta Mistério Dos Games e etc...</p>
+                           <a href="ConteudoVicioMedonho.html" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item contos">
+                        
+                        <div class="front" style="background-image: url('img/ViralQuest.jpg')">
+                           <h1 class="text-shadow">ViralQuest</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>ViralQuest</h2>
+                           <p></p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item outros">
+                        
+                        <div class="front" style="background-image: url('img/VirtualTrash.jpg')">
+                           <h1 class="text-shadow">VirtualTrash</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>VirtualTrash</h2>
+                           <p>"Apenas amigos virtuais unidos para uma conversa da hora."</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item contos">
+                        
+                        <div class="front" style="background-image: url('img/Zedin.jpg')">
+                           <h1 class="text-shadow">Zedin</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Zedin</h2>
+                           <p>"Conto histórias de terror ou de coisas estranhas que vejo na internet."</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>                    
+                    
+                    <div class="card-flip item outros">
+                        
+                        <div class="front" style="background-image: url('img/ZonaMorta.jpg')">
+                           <h1 class="text-shadow">Zona Morta</hi>
+                        </div>
+                        
+                        <div class="back">
+                           <h2>Zona Morta</h2>
+                           <p>"Hey! Bem - vindos a minha zona morta. Me chamo Maru e não sei ao certo o que estou fazendo aqui, talvez fale de uns mistérios ou animes de terror"</p>
+                           <a href="" >Acessar pagina</a>
+                        </div>
+
+                    </div>
+
+                </div><!--Centraliza Card-->
+
+            </div><!--Box Artigo-->
+
+
+        <div class="clear"></div>
+        </div>
+    </section><!--FECHA BOX HTML-->
+
+
+</main>
+
+<footer class="main_footer container">
+    <div class="main_footer_copy">
+
+        <p class="m-b-footer">Este site não tem a intenção de roubar ou ofender nenhum dos criadores de conteudo, todos os direitos reservados aos seu respectivos donos.</p> <br>
+        <p class="by"> Desenvolvido por: <a href="https://www.youtube.com/channel/UC2s3RNfrZ1N_Rd_UPxOBPzA" title="Templates Html" >Sanko</a></p>
+    
+    </div>
+</footer>
+
+<script src="js/jquery.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
