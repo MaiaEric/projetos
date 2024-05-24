@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/halloween.css">
+        <title>Cadastro</title>
+    </head>
+    <body>
+        <form action="index.html" method="get" onsubmit="return validateFormCadastro()">
+            <h2>Cadastro</h2>
+            <div class="ip">
+                <input type="text" placeholder="Digite seu nome de usuário" id="usuario" name="usuario"><br>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="ip">
+                <input type="password" placeholder="Digite sua senha" id="senha" name="senha"><br>
+                <i class='bx bxs-lock'></i>
+            </div>
+            <p id="erro"></p>
+            <button type="submit">Cadastrar-se</button>
+            <p>já tem uma conta? <a href="login.html">clique aqui!</a></p>
+        </form>
+        <script src="js/login_cadastro.js"></script>
+    </body>
+</html>

@@ -1,0 +1,136 @@
+body{
+	background-image: url('img/planodefundo.webp');
+}
+
+#navlist {
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    font-family: verdana;
+    font: white;
+    font-size: 20;
+}
+
+#navlist a{
+    float: left;
+    display: block;
+    background-color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: trebuchet ms;
+}
+
+.navlist-right {
+    float: right;
+}
+
+#navlist a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.search input[type=text] {
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+}
+
+.search {
+    float: right;
+    margin: 2px;
+}
+/*footer*/
+
+.footer{
+    background:  black;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    }
+
+
+    /*icones*/
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 55px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius: 50%;
+
+      }
+  
+
+    .fa-twitter {
+        position: absolute;
+        background: #55ACEE;
+        color: white;
+      }
+      .fa-instagram {
+        position: absolute;
+        background: #125688;
+        color: white;
+      }
+
+      #rodapeprincipal{
+    background-color: black;
+    text-align:center;
+    width: 100%;
+    position: relative;
+}
+
+#login{
+    text-decoration: none;
+    text-align: right;
+}
+#exampleModalLabel{
+    text-align: center
+}
+#exampleInputPassword1, 
+#exampleInputEmail1{
+    text-align: left;
+    font-style: italic;
+}
+
+.botao{
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 7px;
+}
+.quadro{
+    align-items: center;
+    width: 65%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.linha1{
+    margin-top: 2%;
+    position: relative;
+}
+
+.linha2{
+    position: relative;
+}
+
+.btn1{
+    position: relative;
+    margin-top: 20%;
+    margin-left: 45%;
+    background-color: #efcfb6;
+    color: black;
+    width: auto;
+    height: 40px;
+    border-radius: 7px;
+    border-color: #efcfb6;
+}
+
+.ende:hover{background: #ddd;}

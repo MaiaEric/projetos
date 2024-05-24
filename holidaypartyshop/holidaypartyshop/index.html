@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link id="estilo" rel="stylesheet" href="css/natal.css" type="text/css">
+        <title>Home</title>
+    </head>
+    <body>
+        <script>
+            // Recupera o nome de usuário armazenado no localStorage
+            const usernameFromLocalStorage = localStorage.getItem("usuarioLogado");
+
+            // Verifica se o usuário está logado
+            if (!usernameFromLocalStorage) {
+            window.location.href = "login.html";
+            }
+
+        const tema = localStorage.getItem('tema') || 'halloween';
+
+            function selecionarEstilo(nomeDoArquivo) {
+                var estiloSelecionado = document.getElementById('estilo');
+                estiloSelecionado.href = `css/${nomeDoArquivo}.css`;
+                localStorage.setItem('tema',nomeDoArquivo);
+            }
+
+            if(tema){
+                selecionarEstilo(tema);
+            }
+
+        </script>
+        <div id="toast-container"></div>
+        <header>
+            <h1><i class='bx bx-ghost'></i>HolidayPartyShop</h1>
+        </header>
+        <nav>
+            <button class="options">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            <a class="secTema desktop" href="#" onclick="selecionarEstilo('halloween')">Halloween</a>
+            <a class="secTema desktop" href="#" onclick="selecionarEstilo('natal')">Natal</a>
+            <a class="secTema desktop" href="#" onclick="selecionarEstilo('anoNovo')">Ano novo</a>
+        </nav>
+        <div class="sidebar mobile">
+            <a class="secTema mobile" href="#" onclick="selecionarEstilo('halloween')">Halloween</a>
+            <div class="hr mobile"></div>
+            <a class="secTema mobile" href="#" onclick="selecionarEstilo('natal')">Natal</a>
+            <div class="hr mobile"></div>
+            <a class="secTema mobile" href="#" onclick="selecionarEstilo('anoNovo')">Ano novo</a>
+            <div class="hr mobile"></div>
+            <a href="#">Fantasias</a>
+            <div class="hr"></div>
+            <a href="#" onclick="logout()">Log-out</a>
+            <div class="hr"></div>
+            <a href="#"></i>Carrinho</a>
+            <div class="hr"></div>
+            <a href="perfil.html"></i>Ver perfil</a>
+          </div>
+          <section id="prod">
+            <div class="card-group" id="cardGroup"></div>
+        </section>
+        <script src="js/script.js"></script>
+        <script>        
+        
+        // Função para criar os elementos HTML com base no array de produtos
+        function criarCards() {
+            const cardGroup = document.getElementById('cardGroup');
+        
+            if (!cardGroup) {
+                console.error("Elemento com ID 'cardGroup' não encontrado no HTML.");
+                return;
+            }
+
+            const produtosFiltrados = produtos.filter((produto) => produto.tema === tema);
+        
+            produtosFiltrados.forEach((produto) => {
+                // Criação do elemento article
+                const article = document.createElement('article');
+        
+                // Criação do elemento div com a classe card-img
+                const cardImg = document.createElement('div');
+                cardImg.classList.add('card-img');
+        
+                // Criação do elemento img e atribuição do src com base na informação do produto
+                const img = document.createElement('img');
+                img.src = 'img/produtos/' + produto.imagem;
+                img.alt = 'Imagem de ' + produto.nome;
+        
+                // Criação do elemento div com a classe info
+                const info = document.createElement('div');
+                info.classList.add('info');
+        
+                // Criação do elemento p com o nome do produto
+                const nomeProduto = document.createElement('p');
+                nomeProduto.innerHTML = '<strong>' + produto.nome + '</strong>';
+        
+                article.onclick = function() {
+                    modalProduto(produto);
+                };
+
+                // Adiciona os elementos ao DOM
+                cardGroup.appendChild(article);
+                article.appendChild(cardImg);
+                cardImg.appendChild(img);
+                article.appendChild(info);
+                info.appendChild(nomeProduto);
+            });
+        }
+        
+        // Chama a função para criar os cards ao carregar a página
+        document.addEventListener('DOMContentLoaded', criarCards);
+        </script>
+        <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="closeModal()"><i class='bx bx-x'></i></button>
+            <div class="modal-img" id="cardImgModal">
+                <img id="img" src="">
+            </div>
+            <div class="modal-info">
+                <h2 id="nomeProduto"></h2>
+                <p id="preco"></p>
+                <p id="quant"></p>
+                <details id="desc">
+                    <summary>Mais informações</summary>
+                    <p id="descricao"></p>
+                </details>
+            </div>
+        </div>
+    </div>
+        <div class="msg">em produção</div>
+        <script src="js/modal.js"></script>
+        <script src="js/login_cadastro.js"></script>
+
+        <script>
+            // Função para verificar a data e mudar a folha de estilo
+            function verificarDataEAlterarTema() {
+                var dataAtual = new Date();
+                
+        // Define as datas para os eventos sem incluir o ano
+        var dataInicioNatal = new Date(dataAtual.getFullYear(), 11, 20); // Mês é 0-indexado, então dezembro é 11
+        var dataFimNatal = new Date(dataAtual.getFullYear(), 11, 26);
+
+        var dataInicioHalloween = new Date(dataAtual.getFullYear(), 9, 20); // Outubro é 9
+        var dataFimHalloween = new Date(dataAtual.getFullYear(), 10, 1); // Novembro é 10
+
+        var dataInicioAnoNovo = new Date(dataAtual.getFullYear(), 11, 31); // Dezembro é 11
+        var dataFimAnoNovo = new Date(dataAtual.getFullYear() + 1, 0, 1); // Janeiro é 0 no JavaScript
+
+                if (dataAtual >= dataInicioNatal && dataAtual <= dataFimNatal) {
+                    document.getElementById("estilo").setAttribute("href", "css/natal.css");
+                } else if (dataAtual >= dataInicioHalloween && dataAtual <= dataFimHalloween) {
+                    document.getElementById("estilo").setAttribute("href", "css/halloween.css");
+                } else if (dataAtual >= dataInicioAnoNovo && dataAtual <= dataFimAnoNovo) {
+                    document.getElementById("estilo").setAttribute("href", "css/anoNovo.css");
+                } 
+                /*else {
+                    // Caso contrário, usa um tema padrão
+                    document.getElementById("estilo").setAttribute("href", "css/tema_padrao.css");
+                }*/
+            }
+        
+            // Chama a função ao carregar a página
+            window.onload = verificarDataEAlterarTema;
+        </script>
+        
+        
+
+    </body>
+</html>

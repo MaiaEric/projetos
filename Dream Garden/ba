@@ -1,0 +1,74 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div style="background-color: black; color:white;">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">CADASTRO</h1>  
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="modal-body" style="background-image: url('img/planodefundo.webp');">
+                        <div class="modal-body">
+                            <form name="formCadastro" action="envio.php" method="POST" id="formRegistro">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="inputEmail4"><b>E-mail</b></label>
+                                        <input type="email" name="emailCliente" class="form-control" id="inputEmail4" placeholder="E-mail">
+                                    </div>
+                                    <p class="p-0.5"></p>
+                                    <div class="form-group">
+                                        <label for="inputEmail4"><b>Nome</b></label>
+                                        <input type="text" name="nomeCliente" class="form-control" id="inputEmail4" placeholder="Nome completo">
+                                    </div>
+                                        <p class="p-0.5"></p>
+                                    <div class="form-group">
+                                        <label for="inputPassword4"><b>Senha</b></label>
+                                        <input type="password" name="senhaCliente" class="form-control" id="inputPassword4"
+                                            placeholder="Senha">
+                                    </div>
+                                </div>
+                                <p class="p-0.5"></p>    
+                                <div class="form-group">
+                                    <label for="inputAddress"><b>Endereço</b></label>
+                                    <input type="text" name="enderecoCliente" class="form-control" id="inputAddress"
+                                        placeholder="Endereço">
+                                </div>
+                                <p class="p-0.5"></p>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="inputCity"><b>Cidade</b></label>
+                                        <input type="text" name="cidadeCliente" class="form-control" id="inputCity" placeholder="Cidade">
+                                    </div>
+                                    <p class="p-0.5"></p>
+                                    <div class="form-group">
+                                        <label for="inputCEP"><b>CEP</b></label>
+                                        <input type="text" name="cepCliente" class="form-control" id="inputCEP"
+                                        placeholder="Codigo Postal">
+                                    </div>
+                                    <div class="p-0.5">
+                                        <label for="inputCPF"><b>CPF</b></label>
+                                        <input type="text" name="cpfCliente" class="form-control" id="inputCPF" placeholder="CPf">
+                                    </div>
+                                    </div>
+                                </div>
+                                <p class="p-0.5"></p>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Salvar informações
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-outline-light">Cadastrar</button>
+                        </div>
+                    </div>
+                    <div style="background-color: black;">
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Fechar</button>
+                            
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>

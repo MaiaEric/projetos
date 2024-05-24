@@ -1,0 +1,35 @@
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+div[class*=box] {
+  height: 33.33%;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+}
+/* 
+========================
+      BUTTON TWO
+========================
+*/
+

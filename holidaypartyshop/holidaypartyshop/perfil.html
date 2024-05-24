@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/perfil.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Perfil</title>
+    </head>
+    <body>
+        <script>
+        const backbround = localStorage.getItem("back");
+        const body = document.body;
+
+        body.style.backgroundImage = backbround;
+
+        const fotoPerfilArmazenada = localStorage.getItem("profileImage");
+
+        function definirFotoDePerfil() {
+            const fotoPerfilArmazenada = localStorage.getItem("profileImage");
+            const fotoPerfilElement = document.getElementById("foto-perfil");
+
+            if (fotoPerfilArmazenada) {
+                fotoPerfilElement.src = fotoPerfilArmazenada;
+            }
+        }
+
+        const usernameFromLocalStorage = localStorage.getItem("usuarioLogado");
+
+        if (usernameFromLocalStorage) {
+            const storedUserData = localStorage.getItem(usernameFromLocalStorage);
+        } else {
+                window.location.href = "login.html";
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            const nomeElement = document.getElementById("nome");
+
+            if (nomeElement) {
+                nomeElement.textContent = `Nome de usuário: ${usernameFromLocalStorage}`;
+            } else {
+                console.error("Elemento com ID 'nome' não encontrado no HTML.");
+            }
+        });
+    </script>
+        <a class="back-btn" href="index.html">
+            <i class='bx bx-chevron-left'></i>
+        </a>
+        <div class="card-perfil">
+            <div class="foto-perfil">
+                <img src id="foto-perfil">
+                <button id="alt-perfil" onclick="definirFoto()">
+                    <label for="foto">
+                        <i class='bx bxs-camera'></i>
+                    </label>
+                    <input type="file" id="foto" style="display:none;">
+                </button>
+            </div>
+            <div class="info">
+                <h3 id="nome">Nome de usuário</h3>
+                <h3>Lojas favoritas:</h3>
+                <div class="lista-lojas">
+
+                </div>
+            </div>
+        </div>
+        <div class="btns">
+            <button class="back" onclick="altFundo('btn1')" id="btn-1">back 1 <i
+                    class='bx bxs-image'></i></button>
+            <button class="back" onclick="altFundo('btn2')" id="btn-2">back 2 <i
+                    class='bx bxs-image'></i></button>
+            <button class="back" onclick="altFundo('btn3')" id="btn-3">back 3 <i
+                    class='bx bxs-image'></i></button>
+        </div>
+        <script src="js/perfil.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/toast.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                definirFotoDePerfil();
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,147 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    padding: 5px;
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.card-perfil {
+    position: relative;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.foto-perfil {
+    background-color: white;
+    position: absolute;
+    top: -100px;
+    width: 200px;
+    height: 200px;
+    padding: 2px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+#foto-perfil {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#alt-perfil {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#alt-perfil:active {
+    background-color: rgb(171, 171, 171);
+}
+
+.info {
+    width: 100%;
+    margin-top: 130px;
+}
+
+.btns {
+    position: fixed;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.back {
+    margin: 10px 0px;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.bxs-image {
+    margin-left: 5px;
+}
+
+#btn-1 {
+    background-color: var(--color-primary);
+    color: var(--green);
+    border: solid 2px var(--green);
+}
+
+#btn-2 {
+    background-color: aliceblue;
+    border: solid 2px rgb(188, 11, 46);
+    color: rgb(88, 139, 200);
+}
+
+#btn-2 i {
+    color: rgb(188, 11, 46);
+}
+
+#btn-3 {
+    background-color: rgb(10, 5, 28);
+    color: rgb(255, 191, 0);
+    border: 2px solid rgb(255, 191, 0);
+}
+
+@media(max-width:640px) {
+
+    .btns {
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 0px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .card-perfil {
+        width: calc(100% - 20px);
+    }
+
+    .foto-perfil {
+        top: -60px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .info {
+        margin-top: 80px;
+    }
+
+    #alt-perfil{
+        width: 40px;
+        height: 40px;
+        bottom: -5px;
+        right: -5px;
+    }
+}

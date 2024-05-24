@@ -1,0 +1,82 @@
+@import url('style.css');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
+body {
+  background-image: url('../img/loginFundo.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+form {
+  max-width: 340px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  border: 2px solid var(--color-tertiary);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input {
+  border-radius: 3px;
+  background: var(--color-tertiary-opacity);
+  border: 2px solid var(--color-tertiary);
+  width: 100%;
+  outline: none;
+  color: var(--green);
+  padding: 10px 10px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: var(--green);
+}
+
+.bx {
+  right: 10px;
+  position: absolute;
+  color: var(--green);
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--green);
+  color: var(--color-primary);
+  padding: 10px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+#erro{
+  color: var(--alert);
+  font-weight: 900;
+  font-family: 'Noto Sans', sans-serif;
+  text-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4074b6dd70.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
+    <title>Audio Player</title>
+  </head>
+  <body>
+    <div class="app">
+
+      <nav>
+        <span>Voltar para a pagina inicial</span>
+      </nav>
+      <div class="song-info">
+        <img
+          src=""
+        />
+        <div>
+          <h2>Oi</h2>
+          <h3>Hakim Omari</h3>
+        </div>
+      </div>
+      <div class="player" id="library-link">
+        <div>
+          <input type="range" />
+          <div></div>
+        </div>
+        <span>Inicio</span>
+        <span>Fim</span>
+      </div>
+      <div class="player-control">
+        <i class="fas fa-backward" id="backward"></i>
+        <i class="fas fa-play" id="play-pause"></i>
+        <i class="fas fa-forward" id="forward"></i>
+      </div>
+      <div class="sound-control">
+        <i class="fas fa-volume-down"></i>
+        <input type="range" max="100" step="1" />
+        <i class="fas fa-volume-up"></i>
+      </div>
+      <audio src="DA PIOR PARA MELHOR FASE DO SONIC FORCES (64 kbps).mp3"></audio>
+    </div>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyDrlpoAxibJjGCUbYq8rfBNK7wcjQbzpLg",
+        authDomain: "audio-player-1d670.firebaseapp.com",
+        projectId: "audio-player-1d670",
+        storageBucket: "audio-player-1d670.appspot.com",
+        messagingSenderId: "897703865464",
+        appId: "1:897703865464:web:cdb889b090895c8aa9918d",
+        measurementId: "G-724R4XTJZW",
+        storageBucket: "gs://audio-player-1d670.appspot.com",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      const storage = firebase.storage();
+      const storageRef = storage.ref();
+    </script>
+    <script src="./scripts/songs.js"></script>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/auth.js"></script>
+    <script src="./scripts/storage.js"></script>
+  </body>
+</html>
